@@ -1,4 +1,4 @@
-![Home Screen](./images/screenshots.png)
+![Home Screen](./app/public/images/screenshots.png)
 # 📝 Symfony Task Manager - Mini Project
 
 This project is a simple task management web app built with **Symfony**. It allows users to **create**, **list**, **edit**, and **delete** tasks. It uses **Doctrine ORM** for database management and **Twig** for templating, styled with **Bootstrap 5**.
