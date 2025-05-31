@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Tasks;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,10 +14,18 @@ class TasksForm extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('description')
             ->add('createdAt', null, [
                 'widget' => 'single_text',
             ])
-            ->add('description')
+            ->add('state', ChoiceType::class, [
+                'choices' => [
+                    'En entente' => 'En entente',
+                    'En cours' => 'En cours',
+                    'Completé' => 'Completé',
+                ],
+
+            ])
         ;
     }
 

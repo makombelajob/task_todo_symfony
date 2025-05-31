@@ -69,15 +69,20 @@ class __TwigTemplate_99c7b99fa4a91567405c05e558c465bc extends Template
         yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
         // line 14
         yield "    </head>
-    <body class=\"container\">
-        ";
-        // line 16
-        yield from $this->load("_partials/_header.html.twig", 16)->unwrap()->yield($context);
+    <body>
+        <header class=\"container\">
+            ";
         // line 17
-        yield "        ";
-        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
+        yield from $this->load("_partials/_header.html.twig", 17)->unwrap()->yield($context);
         // line 18
-        yield "    </body>
+        yield "        </header>
+        <main class=\"container\">
+            ";
+        // line 20
+        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
+        // line 21
+        yield "        </main>
+    </body>
 </html>
 ";
         
@@ -187,7 +192,7 @@ class __TwigTemplate_99c7b99fa4a91567405c05e558c465bc extends Template
         yield from [];
     }
 
-    // line 17
+    // line 20
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -230,7 +235,7 @@ class __TwigTemplate_99c7b99fa4a91567405c05e558c465bc extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  191 => 17,  168 => 12,  157 => 13,  154 => 12,  141 => 11,  129 => 8,  116 => 7,  93 => 5,  80 => 18,  77 => 17,  75 => 16,  71 => 14,  69 => 11,  66 => 10,  64 => 7,  59 => 5,  53 => 1,);
+        return array (  196 => 20,  173 => 12,  162 => 13,  159 => 12,  146 => 11,  134 => 8,  121 => 7,  98 => 5,  84 => 21,  82 => 20,  78 => 18,  76 => 17,  71 => 14,  69 => 11,  66 => 10,  64 => 7,  59 => 5,  53 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -249,9 +254,13 @@ class __TwigTemplate_99c7b99fa4a91567405c05e558c465bc extends Template
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body class=\"container\">
-        {%  include \"_partials/_header.html.twig\" %}
-        {% block body %}{% endblock %}
+    <body>
+        <header class=\"container\">
+            {%  include \"_partials/_header.html.twig\" %}
+        </header>
+        <main class=\"container\">
+            {% block body %}{% endblock %}
+        </main>
     </body>
 </html>
 ", "base.html.twig", "/var/www/html/templates/base.html.twig");

@@ -17,11 +17,14 @@ class Tasks
     #[ORM\Column(length: 100)]
     private ?string $name = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $description = null;
+
     #[ORM\Column(options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeImmutable $createdAt = null;
 
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $description = null;
+    #[ORM\Column(length: 20)]
+    private ?string $state = null;
 
     public function __construct()
     {
@@ -44,6 +47,18 @@ class Tasks
         return $this;
     }
 
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): static
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
     public function getCreatedAt(): ?\DateTimeImmutable
     {
         return $this->createdAt;
@@ -56,14 +71,14 @@ class Tasks
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getState(): ?string
     {
-        return $this->description;
+        return $this->state;
     }
 
-    public function setDescription(string $description): static
+    public function setState(string $state): static
     {
-        $this->description = $description;
+        $this->state = $state;
 
         return $this;
     }

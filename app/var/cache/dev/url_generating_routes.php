@@ -20,6 +20,10 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     'app_task' => [[], ['_controller' => 'App\\Controller\\TaskController::index'], [], [['text', '/']], [], [], []],
     'app_task_add' => [[], ['_controller' => 'App\\Controller\\TaskController::addTask'], [], [['text', '/add']], [], [], []],
+    'app_task_edit' => [['id'], ['_controller' => 'App\\Controller\\TaskController::editTask'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/edit']], [], [], []],
+    'app_task_delete' => [['id'], ['_controller' => 'App\\Controller\\TaskController::deleteTask'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], [], []],
     'App\Controller\TaskController::index' => [[], ['_controller' => 'App\\Controller\\TaskController::index'], [], [['text', '/']], [], [], []],
     'App\Controller\TaskController::addTask' => [[], ['_controller' => 'App\\Controller\\TaskController::addTask'], [], [['text', '/add']], [], [], []],
+    'App\Controller\TaskController::editTask' => [['id'], ['_controller' => 'App\\Controller\\TaskController::editTask'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/edit']], [], [], []],
+    'App\Controller\TaskController::deleteTask' => [['id'], ['_controller' => 'App\\Controller\\TaskController::deleteTask'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], [], []],
 ];

@@ -123,12 +123,18 @@ class __TwigTemplate_d8c87169da697131e2ec3bef51a0a647 extends Template
         yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "description", [], "any", false, false, false, 18), 'row');
         yield "
         </div>
+        <div>
+            ";
+        // line 21
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "state", [], "any", false, false, false, 21), 'row');
+        yield "
+        </div>
         <div class=\"fs-3 text-center\">
             <button type=\"submit\" class=\"btn btn-primary\">add task</button>
         </div>
         ";
-        // line 23
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_end');
+        // line 26
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), 'form_end');
         yield "
     </div>
 
@@ -164,7 +170,7 @@ class __TwigTemplate_d8c87169da697131e2ec3bef51a0a647 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  131 => 23,  123 => 18,  117 => 15,  111 => 12,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  137 => 26,  129 => 21,  123 => 18,  117 => 15,  111 => 12,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -187,6 +193,9 @@ class __TwigTemplate_d8c87169da697131e2ec3bef51a0a647 extends Template
         </div>
         <div>
             {{ form_row(form.description) }}
+        </div>
+        <div>
+            {{ form_row(form.state) }}
         </div>
         <div class=\"fs-3 text-center\">
             <button type=\"submit\" class=\"btn btn-primary\">add task</button>
